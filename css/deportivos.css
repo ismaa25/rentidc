@@ -1,0 +1,22 @@
+* {
+    border: solid 1px white;
+}
+body {
+    color: white;
+}
+.art1,.art2 {
+    width: 100%;
+
+}
+img {
+    width: 60%;
+    border-radius: 15px;
+}
+.art1 {
+    display: flex;
+    float: left;
+    height: 33%;
+}
+.f1 {
+    width: 33%;
+}

@@ -8,6 +8,7 @@
     <meta name="author" content="ISMAEL LOPEZ VILLAR">
     <link rel="icon" href="img/favicon-16x16.png">
     <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="css/deportivos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>RentIDC</title>
 </head>
@@ -31,27 +32,25 @@
     </header>
     <main>
         <section id="caja2">
-            <article>
-                
-            </article>
-            <article>
-                
-            </article>
-            <article>
-                
-            </article>
-        </section>
-        <section id="caja3">
-            <article>
-                
-            </article>
-            <article>
-                
-            </article>
-            <article>
-                
+            <article class=art1>
+                <br>
+                <figure class="f1">
+                <img class="img1" src="img/lambo.jpeg">
+                <br>
+                <p>Alquiler Lamborghini Huracán</p>
+                <input type="submit" value="Añadir">
+                </figure>
+                <br>
+                <img src="img/porche.jpeg">
+                <p>Alquiler Porsche GT3 </p>
+                <input type="submit" value="Añadir">
+                <br>
+                <img src="img/ferrari.jpg">
+                <p>Alquiler Ferrari F430 F1</p>
+                <input type="submit" value="Añadir">
             </article>
         </section>
+       
     </main>
     <footer></footer>
 </body>
