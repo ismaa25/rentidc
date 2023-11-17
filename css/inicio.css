@@ -1,62 +1,13 @@
-@font-face {
-    font-family: Poppins-Regular;
-    src: url(../font/Poppins-Regular.ttf);
-}
-*{
-    /*border: 1px solid white;*/
-    margin: 0;
-}
-
-/*CABESA*/
-body {
-    background-color: black;
-    font-family: Poppins-Regular;
-}
-
-i {
-    margin-right: 6px;
-    color: bisque;
-}
-
-.caja1{
-    width: 16%;
-}
-.logo{
-    width: 130px;
-    float: left;
-    margin: 5px;
-}
-ol li{
-    width: 16.9%;
-    float: left;
-    margin-top: 60px;
-    color: white;
-    list-style: none;
-    text-align: center;
-    
-}
-ol li a{
-    color: bisque;
-    text-decoration: none;
-}
-
-a:hover, a:hover i {
-    color: rgb(201, 172, 6);
-}
-
-header{
-    height: 140px;
-    border-bottom: 1px solid white;
-}
-
 /*cuerpo*/
+
 .video{
     width: 100%;
     /* height: 600px; */
 }
 .art1{
-    height: 790px;
+    height: 670px;
     border-bottom: 1px solid white;
+    text-align: center;
 }
 .p1{
     color: white;
@@ -73,23 +24,28 @@ header{
 
 .cj1{
     width: 100%;
+    text-align: center;
 }
 .foto1{
-    width: 100%;
+    width: 95%;
     border-radius: 15px;
+    
 }
 .cj2{
     width: 100%;
+    text-align: center;
 }
 .foto2{
-    width: 100%;
+    width: 95%;
     border-radius: 15px;
+   
 }
 .cj3{
     width: 100%;
+    text-align: center;
 }
 .foto3{
-    width: 100%;
+    width: 95%;
     border-radius: 15px;
 }
 .box1,.box2,.box3{

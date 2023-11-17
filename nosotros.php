@@ -7,7 +7,7 @@
     <meta name="author" content="DIEGO LANAGRAN ESCAÑO">
     <meta name="author" content="ISMAEL LOPEZ VILLAR">
     <link rel="icon" href="img/favicon-16x16.png">
-    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>RentIDC</title>
 </head>
