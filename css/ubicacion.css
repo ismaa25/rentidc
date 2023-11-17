@@ -1,0 +1,56 @@
+
+/*cuerpo*/
+#art1{
+    color: white;
+    /* border-bottom: 1px solid white; */
+    margin: 0 auto;
+    text-align: center;
+}
+
+#art2{
+    color: white;
+
+}
+
+#art3{
+    color: white;
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: center;
+}
+
+#formulario{
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+p{
+    color:white;
+    text-align: center;
+}
+#enviar{
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    border-color: gold;
+}
+#enviar:hover{
+    border-radius: 5px;
+    color: black;
+    background-color: gold;
+    border-color: black;
+}
+#borrar{
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    border-color: gold;
+}
+#borrar:hover{
+    border-radius: 5px;
+    color: black;
+    background-color: gold;
+    border-color: black;
+}

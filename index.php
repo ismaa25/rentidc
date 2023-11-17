@@ -7,6 +7,7 @@
     <meta name="author" content="DIEGO LANAGRAN ESCAÑO">
     <meta name="author" content="ISMAEL LOPEZ VILLAR">
     <link rel="icon" href="img/favicon-16x16.png">
+    <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/inicio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>RentIDC</title>
@@ -16,7 +17,7 @@
         include('comprobarLogin.php');
     ?>
     <header>
-        <figure="caja1">
+        <figure class="caja1">
             <a href="index.php"><img src="img/logo_cabesa_negro.png" class="logo"></a>   
         </figure>
         <nav class="nav">
@@ -30,9 +31,9 @@
         </nav>
     </header>
     <main>
-        <section id="caja2">
+        <section id="caj1">
             <article class="art1">
-                <video src="video/anuncio.mp4" autoplay loop class="video"></video>
+                <video src="video/anuncio1.mp4" autoplay loop class="video"></video>
             </article>
             <article class="art2">
                 <br>
@@ -43,32 +44,38 @@
             <article>
                 <article class="box1">
                     <figure class="cj1">
-                        <img src="img/mercedes.png" class="foto1">
+                        <img src="img/mercedesp.png" class="foto1">
+                        <p><b>Mercedes Benz AMG G36</b></p>
+                        <p>Un coche de lujo fabricado por Rolls-Royce Motors Cars 
+                            nombrado "Ghost" en honor al Fastama de plata, Siendo su primera 
+                            fabricación en 1906 y anunciado en 2009 en Shanghái
+                        </p>
                     </figure>
-                    <p><b></b></p>
-                    <p><b></b></p>
-                    <p><b></b></p>
                 </article>
                 <article class="box2">
                     <figure class="cj2">
-                        <img src="img/bentley.png" class="foto2">
+                        <img src="img/bentleyp.png" class="foto2">
+                        <p><b>Bentley GT V8</b></p>
+                        <p>Un coche de lujo fabricado por Rolls-Royce Motors Cars 
+                            nombrado "Ghost" en honor al Fastama de plata, Siendo su primera 
+                            fabricación en 1906 y anunciado en 2009 en Shanghái
+                        </p>
                     </figure>
-                    <p><b></b></p>
-                    <p><b></b></p>
-                    <p><b></b></p>
                 </article>
                 <article class="box3">
                     <figure class="cj3">
-                        <img src="img/rols4.jpg" class="foto3">
+                        <img src="img/rols4p.jpg" class="foto3">
+                        <p><b>Rolls-Royce Ghost</b></p>
+                        <p>Un coche de lujo fabricado por Rolls-Royce Motors Cars 
+                            nombrado "Ghost" en honor al Fastama de plata, Siendo su primera 
+                            fabricación en 1906 y anunciado en 2009 en Shanghái
+                        </p>
                     </figure>
-                    <p><b></b></p>
-                    <p><b></b></p>
-                    <p><b></b></p>
                 </article>
             </article>
-            
         </section>
-        <section id="caja3">
+        
+        <section id="caja2">
             <article>
                 
             </article>
@@ -80,6 +87,9 @@
             </article>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+
+        <p><a href="ubicacion.php">Ubicación</a></p>
+    </footer>
 </body>
 </html>

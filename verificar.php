@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+$errorCredenciales = "";
 
 if (isset($_POST['usuario']) && isset($_POST['pass'])) {
     $usuario = $_POST['usuario'];

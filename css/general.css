@@ -1,0 +1,58 @@
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(../font/Poppins-Regular.ttf);
+}
+*{
+    /*border: 1px solid white;*/
+    margin: 0;
+}
+
+/*CABESA*/
+body {
+    background-color: black;
+    font-family: Poppins-Regular;
+    color: white;
+}
+
+i {
+    margin-right: 6px;
+    color: bisque;
+}
+
+.caja1{
+    width: 16%;
+}
+.logo{
+    width: 110px;
+    float: left;
+    margin-left: 20%;
+}
+ol li{
+    width: 16.9%;
+    float: left;
+    margin-top: 45px;
+    color: white;
+    list-style: none;
+    text-align: center;
+    
+}
+ol li a{
+    color: bisque;
+    text-decoration: none;
+}
+
+a:hover, a:hover i {
+    color: rgb(201, 172, 6);
+}
+
+header{
+    height: 110px;
+    border-bottom: 1px solid white;
+}
+
+/*Pie de pagina*/
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
