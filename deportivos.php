@@ -7,7 +7,8 @@
     <meta name="author" content="DIEGO LANAGRAN ESCAÑO">
     <meta name="author" content="ISMAEL LOPEZ VILLAR">
     <link rel="icon" href="img/favicon-16x16.png">
-    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="css/deportivos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>RentIDC</title>
 </head>
@@ -31,25 +32,44 @@
     </header>
     <main>
         <section id="caja2">
-            <article>
-                
-            </article>
-            <article>
-                
-            </article>
-            <article>
-                
-            </article>
-        </section>
-        <section id="caja3">
-            <article>
-                
-            </article>
-            <article>
-                
-            </article>
-            <article>
-                
+            <article class=art1>
+                <br>
+                <figure class="f1">
+                    <img src="img/lambo.jpeg">
+                    <br>
+                    <p>Alquiler Lamborghini Huracán 2000€/dia</p>
+                    <input type="submit" value="Añadir">
+                </figure>
+                <br>
+                <figure class="f2">
+                    <img src="img/porche.jpeg">
+                    <p>Alquiler Porsche GT3 1200€/dia</p>
+                    <input type="submit" value="Añadir">
+                </figure>
+                <br>
+                <figure class="f3">
+                    <img src="img/ferrari.jpg">
+                    <p>Alquiler Ferrari F430 F1 1700€/dia</p>
+                    <input type="submit" value="Añadir">
+                </figure>
+                <br>
+                <figure class="f4">
+                    <img src="img/mustang.jpg">
+                    <p>Alquiler Ford Mustang 5.0 Cabrio 800€/dia</p>
+                    <input type="submit" value="Añadir">
+                </figure>
+                <br>
+                <figure class="f5">
+                    <img src="img/bmw.jpeg">
+                    <p>Alquiler BMW M4 769€/dia</p>
+                    <input type="submit" value="Añadir">
+                </figure>
+                <br>
+                <figure class="f6">
+                    <img src="img/audi.jpg">
+                    <p>Alquiler Audi RS 890€/dia</p>
+                    <input type="submit" value="Añadir">
+                </figure>
             </article>
         </section>
     </main>

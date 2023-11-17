@@ -4,19 +4,20 @@
 body {
     color: white;
 }
-.art1,.art2 {
+article figure img {
     width: 100%;
-
-}
-img {
-    width: 60%;
+    height: 250px;
     border-radius: 15px;
 }
+
 .art1 {
     display: flex;
-    float: left;
-    height: 33%;
+    flex-wrap: wrap;
 }
-.f1 {
+.f1,.f2,.f3,.f4,.f5,.f6 {
     width: 33%;
+    text-align: center;
+}
+.caja2 {
+    width: 100%;
 }
