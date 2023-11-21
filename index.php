@@ -25,7 +25,7 @@
                 <li><a href="index.php"><i class="fa-solid fa-house"></i><b>Inicio</b></a></li>
                 <li><a href="deportivos.php"><i class="fa-solid fa-car"></i><b>Coches Deportivos</b></a></li>
                 <li><a href="nosotros.php"><i class="fa-regular fa-id-badge"></i><b>Sobre nosotros</b></a></li>
-                <li><a href="ubicacion.php"><i class="fa-solid fa-location-arrow"></i><b>Ubicacion</b></a></li>
+                <li><a href=".php"><i class="fa-solid fa-location-arrow"></i><b>Reservas</b></a></li>
                 <li><a href="cerrarSesion.php"><i class="fa-solid fa-right-from-bracket"></i><b>Cerrar sesión</b></a></li>
             </ol>
         </nav>
@@ -46,9 +46,9 @@
                     <figure class="cj1">
                         <img src="img/mercedesp.png" class="foto1">
                         <p><b>Mercedes Benz AMG G36</b></p>
-                        <p>Un coche de lujo fabricado por Rolls-Royce Motors Cars 
-                            nombrado "Ghost" en honor al Fastama de plata, Siendo su primera 
-                            fabricación en 1906 y anunciado en 2009 en Shanghái
+                        <p>Un automovil todoterreno fabricado en 1978 por mercedes benz,
+                            es considerado por muchos el mejor todoterreno del mercado,
+                            se utiliza ampliamente como vehiculo militar.
                         </p>
                     </figure>
                 </article>
@@ -56,9 +56,9 @@
                     <figure class="cj2">
                         <img src="img/bentleyp.png" class="foto2">
                         <p><b>Bentley GT V8</b></p>
-                        <p>Un coche de lujo fabricado por Rolls-Royce Motors Cars 
-                            nombrado "Ghost" en honor al Fastama de plata, Siendo su primera 
-                            fabricación en 1906 y anunciado en 2009 en Shanghái
+                        <p>Se presento por primera vez en 2012 en america del norte 
+                            ,el coche tiene un motor v8 biturbo de 4 litros y 3994cc
+                            tambien es capaz de alcanzar la velocidad de 309km/h
                         </p>
                     </figure>
                 </article>
@@ -89,7 +89,7 @@
     </main>
     <footer>
 
-        <p><a href="ubicacion.php">Ubicación</a></p>
+        <p><a href="nosotros.php/#art1">Ubicación</a></p>
     </footer>
 </body>
 </html>
