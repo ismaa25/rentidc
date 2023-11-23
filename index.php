@@ -89,7 +89,7 @@
     </main>
     <footer>
 
-        <p><a href="nosotros.php/#art1">Ubicación</a></p>
+        <p><a href="nosotros.php#art1">Ubicación</a></p>
     </footer>
 </body>
 </html>
