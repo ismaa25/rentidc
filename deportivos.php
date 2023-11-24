@@ -128,12 +128,12 @@
                         <input type="number" name="dias" value="1" min="1">
                         <input type="submit" value="Añadir al Carrito">
                     </figure>
-                <form>
+                </form>
             </article>
             <article class="carro">
                 <aside id="carrito-lateral">
                     <h2>Carrito de Compras</h2>
-                    <form method="post" action="#">
+                    <form method="post" action="">
                         <ul>
                             <?php
                             // Verificar si hay un usuario conectado
