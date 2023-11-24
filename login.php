@@ -26,7 +26,10 @@
                     <span class="error"><?php echo $errorCredenciales; ?></span>
                     <br>
                     <input type="submit" value="LOGIN">
+                    <br>
+                    <a href="nuevoUsuario.php">Registrate aqui</a> 
                 </form>
+                
             </article>
         </section>
     </main>

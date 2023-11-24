@@ -37,3 +37,24 @@ body {
 h1 {
     text-align: center;
 }
+
+.eliminarProd {
+    background: none;
+    border: none;
+    padding: 10px;
+    font-size: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+.listaCompra {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logoCoches {
+    width: 25px;
+    margin-right: 10px;
+}
