@@ -13,26 +13,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['vaciarCarrito'])) {
     $_SESSION['carrito'] = [];
     setcookie('carrito', '', time() - 3600, '/');
     
-    // Redirigir al usuario a la misma página después de vaciar el carrito
+    // Redirigir al usuario a la misma pagina
     header('Location: deportivos.php');
     exit;
 }            
 
-// Guardar el carrito en la cookie al finalizar la sesión
+// Guardar el carrito en la cookie al finalizar la sesion
 if (isset($_SESSION['carrito'])) {
     $carrito_serializado = serialize($_SESSION['carrito']);
     setcookie('carrito', $carrito_serializado, time() + (30 * 24 * 60 * 60), '/');
 }
 // Eliminar producto del carrito
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['eliminarProducto'])) {
-    // Eliminar el producto del carrito utilizando el índice directamente
+    // Eliminar el producto del carrito
     unset($_SESSION['carrito'][$_POST['eliminarProducto']]);
 
     // Actualizar la cookie
     $carrito_serializado = serialize($_SESSION['carrito']);
     setcookie('carrito', $carrito_serializado, time() + (30 * 24 * 60 * 60), '/');
     
-    // Redirigir al usuario a la misma página después de eliminar el producto
+    // Redirigir al usuario a la misma pagina después de eliminar el producto
     header('Location: deportivos.php');
     exit;
 }
