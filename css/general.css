@@ -3,14 +3,15 @@ ALUMNO: CHRISTIAN ADRIAN PEREIRA GALEANO
 ALUMNO: DIEGO LANAGRAN ESCAÑO
 ALUMNO: ISMAEL LOPEZ VILLAR 
 */
+
+ *{
+
+    margin: 0;
+} 
 @font-face {
     font-family: Poppins-Regular;
     src: url(../font/Poppins-Regular.ttf);
 }
- /*{
-    border: 1px solid white;
-    margin: 0;
-} */
 
 /*CABESA*/
 body {
@@ -33,9 +34,9 @@ i {
     margin-left: 20%;
 }
 ol li{
-    width: 16.9%;
+    width: 22%;
     float: left;
-    margin-top: 45px;
+    margin-top: 40px;
     color: white;
     list-style: none;
     text-align: center;
@@ -57,7 +58,32 @@ header{
 
 /*Pie de pagina*/
 
-footer a{
+#pie a{
     text-decoration: none;
     color: white;
+}
+
+#pie p{
+    width: 100%;
+    text-align: end;
+    margin: 0px;
+}
+#pie{
+    float: right;
+    margin-top: 100px; 
+}
+
+#pie2{
+    float: right;
+    margin-top: 1300px; 
+}
+#pie2 a{
+    text-decoration: none;
+    color: white;
+}
+
+#pie2 p{
+    width: 100%;
+    text-align: end;
+    margin: 0px;
 }

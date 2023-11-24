@@ -25,8 +25,7 @@
                 <li><a href="index.php"><i class="fa-solid fa-house"></i><b>Inicio</b></a></li>
                 <li><a href="deportivos.php"><i class="fa-solid fa-car"></i><b>Coches Deportivos</b></a></li>
                 <li><a href="nosotros.php"><i class="fa-regular fa-id-badge"></i><b>Sobre nosotros</b></a></li>
-                <li><a href=".php"><i class="fa-solid fa-location-arrow"></i><b>Reservas</b></a></li>
-                <li><a href="cerrarSesion.php"><i class="fa-solid fa-right-from-bracket"></i><b>Cerrar sesión</b></a></li>
+                <li><a href="cerrarSesion.php"><i class="fa-solid fa-right-from-bracket"></i><b>Cerrar sesión | <?php echo $_SESSION['login'];?></b></a></li>
             </ol>
         </nav>
     </header>
@@ -74,22 +73,12 @@
                 </article>
             </article>
         </section>
-        
-        <section id="caja2">
-            <article>
-                
-            </article>
-            <article>
-                
-            </article>
-            <article>
-                
-            </article>
-        </section>
     </main>
-    <footer>
-
-        <p><a href="nosotros.php#art1">Ubicación</a></p>
+    <footer id="pie">
+        <p>&copy;Propiedad de RentIDC</p>
+        <p><a href="https://site.educa.madrid.org/ies.villablanca.madrid/">IES Villablanca</a></p>
+        <p><a href="mailto:asirtfg@gmail.com">Contacto</a></p>
+        <p><a href="nosotros.php#art1">Ubicación</a></p> 
     </footer>
 </body>
 </html>

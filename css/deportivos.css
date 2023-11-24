@@ -58,3 +58,36 @@ h1 {
     width: 25px;
     margin-right: 10px;
 }
+
+#carrito{
+    background-color: rgb(24, 21, 21);
+    color: white;
+    width: 70px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+#carrito:hover{
+    background-color: rgb(27, 22, 22);
+    color: white;
+    width: 90px;
+    height: 25px;
+    border-radius: 5px;
+}
+#fcarrito{
+    background-color: rgb(24, 21, 21);
+    color: white;
+    width: 120px;
+    height: 20px;
+    border-radius: 5px;
+}
+#fcarrito:hover{
+    background-color: rgb(66, 57, 57);
+    color: white;
+    width: 125px;
+    height: 25px;
+    border-radius: 5px;
+}
+#caja{
+    width: 35px;
+}

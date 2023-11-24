@@ -1,4 +1,9 @@
 <?php
+/*
+ALUMNO: CHRISTIAN ADRIAN PEREIRA GALEANO
+ALUMNO: DIEGO LANAGRAN ESCAÑO
+ALUMNO: ISMAEL LOPEZ VILLAR 
+*/
     if (isset($_POST['ausuario']) && isset($_POST['apass'])) {
         $ausuario = $_POST['ausuario'];
         $apass = $_POST['apass'];
