@@ -26,8 +26,7 @@
                 <li><a href="index.php"><i class="fa-solid fa-house"></i><b>Inicio</b></a></li>
                 <li><a href="deportivos.php"><i class="fa-solid fa-car"></i><b>Coches Deportivos</b></a></li>
                 <li><a href="nosotros.php"><i class="fa-regular fa-id-badge"></i><b>Sobre nosotros</b></a></li>
-                <li><a href=".php"><i class="fa-solid fa-location-arrow"></i><b>Reservas</b></a></li>
-                <li><a href="cerrarSesion.php"><i class="fa-solid fa-right-from-bracket"></i><b>Cerrar sesión</b></a></li>
+                <li><a href="cerrarSesion.php"><i class="fa-solid fa-right-from-bracket"></i><b>Cerrar sesión | <?php echo $_SESSION['login'];?></b></a></li>
             </ol>
         </nav>
     </header>
@@ -43,8 +42,9 @@
                         <input type="hidden" name="precio" value="2000">
                         <input type="hidden" name="imagen" value="img/logoCoches/logoLAMBO.png">
                         <label for="dias">Dias:</label>
-                        <input type="number" name="dias" value="1" min="1">
-                        <input type="submit" name="agregarAlCarrito" value="Añadir al Carrito">
+                        <input type="number" name="dias" value="1" min="1" id="caja">
+                        <br>
+                        <input type="submit" name="agregarAlCarrito" value="Añadir" id="carrito">
                     </figure>
                 </form>
                 <form action="" method="post">
@@ -56,8 +56,9 @@
                         <input type="hidden" name="precio" value="1200">
                         <input type="hidden" name="imagen" value="img/logoCoches/logoPORSCHE.png">
                         <label for="dias">Dias:</label>
-                        <input type="number" name="dias" value="1" min="1">
-                        <input type="submit" name="agregarAlCarrito" value="Añadir al Carrito">
+                        <input type="number" name="dias" value="1" min="1"  id="caja" >
+                        <br>
+                        <input type="submit" name="agregarAlCarrito" value="Añadir" id="carrito">
                     </figure>
                 </form>
                 <form action="" method="post">
@@ -69,8 +70,9 @@
                         <input type="hidden" name="precio" value="1700">
                         <input type="hidden" name="imagen" value="img/logoCoches/logoFERRARI.png">
                         <label for="dias">Dias:</label>
-                        <input type="number" name="dias" value="1" min="1">
-                        <input type="submit" name="agregarAlCarrito" value="Añadir al Carrito">
+                        <input type="number" name="dias" value="1" min="1"  id="caja">
+                        <br>
+                        <input type="submit" name="agregarAlCarrito" value="Añadir" id="carrito">
                     </figure>
                 </form>
                 <form action="" method="post">
@@ -82,8 +84,9 @@
                         <input type="hidden" name="precio" value="800">
                         <input type="hidden" name="imagen" value="img/logoCoches/logoMUSTANG.png">
                         <label for="dias">Dias:</label>
-                        <input type="number" name="dias" value="1" min="1">
-                        <input type="submit" name="agregarAlCarrito" value="Añadir al Carrito">
+                        <input type="number" name="dias" value="1" min="1"  id="caja">
+                        <br>
+                        <input type="submit" name="agregarAlCarrito" value="Añadir" id="carrito">
                     </figure>
                 </form>
                 <form action="" method="post">
@@ -95,8 +98,9 @@
                         <input type="hidden" name="precio" value="769">
                         <input type="hidden" name="imagen" value="img/logoCoches/logoBMW.png">
                         <label for="dias">Dias:</label>
-                        <input type="number" name="dias" value="1" min="1">
-                        <input type="submit" name="agregarAlCarrito" value="Añadir al Carrito">
+                        <input type="number" name="dias" value="1" min="1"  id="caja">
+                        <br>
+                        <input type="submit" name="agregarAlCarrito" value="Añadir" id="carrito">
                     </figure>
                 </form>
                 <form action="" method="post">
@@ -108,14 +112,15 @@
                         <input type="hidden" name="precio" value="890">
                         <input type="hidden" name="imagen" value="img/logoCoches/logoAUDI.png">
                         <label for="dias">Dias:</label>
-                        <input type="number" name="dias" value="1" min="1">
-                        <input type="submit" name="agregarAlCarrito" value="Añadir al Carrito">
+                        <input type="number" name="dias" value="1" min="1"  id="caja">
+                        <br>
+                        <input type="submit" name="agregarAlCarrito" value="Añadir" id="carrito">
                     </figure>
                 </form>
             </article>
             <article class="carro">
                 <aside id="carrito-lateral">
-                    <h2>Carrito de Compras</h2>
+                    <h2>Reservas Pendientes</h2>
                     <form method="post" action="">
                         <ul>
                             <?php
@@ -134,12 +139,17 @@
                         </ul>
                     </form>
                     <form method="post" action="">
-                        <button type="submit" name="vaciarCarrito">Vaciar Carrito</button>
+                        <button type="submit" name="vaciarCarrito" id="fcarrito">Vaciar Carrito</button>
                     </form>
                 </aside>
             </article>
         </section>
     </main>
-    <footer></footer>
+    <footer id="pie2">
+        <p>&copy;Propiedad de RentIDC</p>
+        <p><a href="https://site.educa.madrid.org/ies.villablanca.madrid/">IES Villablanca</a></p>
+        <p><a href="mailto:asirtfg@gmail.com">Contacto</a></p>
+        <p><a href="nosotros.php#art1">Ubicación</a></p> 
+    </footer>
 </body>
 </html>
