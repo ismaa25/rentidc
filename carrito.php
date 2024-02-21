@@ -12,6 +12,11 @@ if (isset($_COOKIE['usuario_id']) && isset($_COOKIE['carritoUsuario' . $_COOKIE[
     $_SESSION['carrito'] = unserialize($_COOKIE['carritoUsuario' . $_COOKIE['usuario_id']]);
 }
 
+// Inicializar $_SESSION['carrito'] como un array si no está definido o está vacío
+if (!isset($_SESSION['carrito'])) {
+    $_SESSION['carrito'] = array();
+}
+
 // Verificar si se ha enviado una solicitud para vaciar el carrito
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['vaciarCarrito'])) {
@@ -42,6 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $id = $_POST['id'];
         $dias = $_POST['dias'];
         $encontrado = false;
+
 
         // Buscar el producto en el carrito
         foreach ($_SESSION['carrito'] as $key => $producto) {
