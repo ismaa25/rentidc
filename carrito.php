@@ -6,56 +6,71 @@ ALUMNO: ISMAEL LOPEZ VILLAR
 */
 session_start();
 
-// Verificar si existe una cookie de carrito
-if (!isset($_SESSION['carrito']) && isset($_COOKIE['carrito'])) {
+// Verificar si existe una cookie de carrito para este usuario
+if (isset($_COOKIE['usuario_id']) && isset($_COOKIE['carritoUsuario' . $_COOKIE['usuario_id']])) {
     // Recuperar el carrito de la cookie y almacenarlo en la sesión
-    $_SESSION['carrito'] = unserialize($_COOKIE['carrito']);
+    $_SESSION['carrito'] = unserialize($_COOKIE['carritoUsuario' . $_COOKIE['usuario_id']]);
 }
 
 // Verificar si se ha enviado una solicitud para vaciar el carrito
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['vaciarCarrito'])) {
-    // Vaciar el carrito en la sesión y eliminar la cookie
-    $_SESSION['carrito'] = [];
-    setcookie('carrito', '', time() - 3600, '/');
-    
-    // Redirigir al usuario a la misma pagina
-    header('Location: deportivos.php');
-    exit;
-}            
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['vaciarCarrito'])) {
+        // Vaciar el carrito en la sesión y eliminar la cookie del carrito
+        $_SESSION['carrito'] = [];
+        setcookie('carritoUsuario' . $_COOKIE['usuario_id'], '', time() - 3600, '/');
+        // Redirigir al usuario a la misma página
+        header('Location: ' . $_SERVER['PHP_SELF']);
+        exit;
+    }
 
-// Guardar el carrito en la cookie al finalizar la sesion
-if (isset($_SESSION['carrito'])) {
-    $carrito_serializado = serialize($_SESSION['carrito']);
-    setcookie('carrito', $carrito_serializado, time() + (30 * 24 * 60 * 60), '/');
-}
-// Eliminar producto del carrito
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['eliminarProducto'])) {
-    // Eliminar el producto del carrito
-    unset($_SESSION['carrito'][$_POST['eliminarProducto']]);
+    // Eliminar producto del carrito
+    if (isset($_POST['eliminarProducto'])) {
+        $indice = $_POST['eliminarProducto'];
+        if (isset($_SESSION['carrito'][$indice])) {
+            unset($_SESSION['carrito'][$indice]);
+            // Actualizar la cookie del carrito
+            $carrito_serializado = serialize($_SESSION['carrito']);
+            setcookie('carritoUsuario' . $_COOKIE['usuario_id'], $carrito_serializado, time() + (30 * 24 * 60 * 60), '/');
+        }
+        // Redirigir al usuario a la misma página después de eliminar el producto
+        header('Location: ' . $_SERVER['PHP_SELF']);
+        exit;
+    }
 
-    // Actualizar la cookie
-    $carrito_serializado = serialize($_SESSION['carrito']);
-    setcookie('carrito', $carrito_serializado, time() + (30 * 24 * 60 * 60), '/');
-    
-    // Redirigir al usuario a la misma pagina después de eliminar el producto
-    header('Location: deportivos.php');
-    exit;
-}
-// Agregar producto al carrito
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['agregarAlCarrito'])) {
-    $producto = [
-        'id' => $_POST['id'],
-        'nombre' => $_POST['nombre'],
-        'precio' => $_POST['precio'],
-        'imagen' => $_POST['imagen'],
-        'dias' => $_POST['dias'],
-    ];
+    // Agregar producto al carrito
+    if (isset($_POST['agregarAlCarrito'])) {
+        $id = $_POST['id'];
+        $dias = $_POST['dias'];
+        $encontrado = false;
 
-    // Agregar el producto al carrito en la sesión
-    $_SESSION['carrito'][] = $producto;
+        // Buscar el producto en el carrito
+        foreach ($_SESSION['carrito'] as $key => $producto) {
+            if ($producto['id'] === $id) {
+                // Si el producto ya está en el carrito, actualizar los días
+                $_SESSION['carrito'][$key]['dias'] += $dias;
+                $encontrado = true;
+                break;
+            }
+        }
 
-    // Guardar el carrito en la cookie
-    $carrito_serializado = serialize($_SESSION['carrito']);
-    setcookie('carrito', $carrito_serializado, time() + (30 * 24 * 60 * 60), '/');
+        // Si el producto no está en el carrito, agregarlo
+        if (!$encontrado) {
+            $_SESSION['carrito'][] = [
+                'id' => $_POST['id'],
+                'nombre' => $_POST['nombre'],
+                'precio' => $_POST['precio'],
+                'imagen' => $_POST['imagen'],
+                'dias' => $_POST['dias'],
+                'logo' => $_POST['logo']
+            ];
+        }
+
+        // Guardar el carrito en la cookie
+        $carrito_serializado = serialize($_SESSION['carrito']);
+        setcookie('carritoUsuario' . $_COOKIE['usuario_id'], $carrito_serializado, time() + (30 * 24 * 60 * 60), '/');
+    }
+
+
+
 }
 ?>

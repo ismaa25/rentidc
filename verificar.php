@@ -12,24 +12,23 @@ if (isset($_POST['usuario']) && isset($_POST['pass'])) {
     $pass = $_POST['pass'];
     $registro = file('usuarios.txt', FILE_IGNORE_NEW_LINES);
 
-    $loginCorrecto = false;
-
     foreach ($registro as $linea) {
         list($nombre, $contrasena) = explode('|', $linea);
 
         if ($usuario == $nombre && $pass == $contrasena) {
-            $loginCorrecto = true;
-            break;
+            // Establecer una cookie para el ID del usuario
+            setcookie('usuario_id', $usuario, time() + (30 * 24 * 60 * 60), '/'); // Caduca en 30 días
+
+            // Establecer la sesión para el usuario
+            $_SESSION['login'] = $usuario;
+
+            header('Location: index.php');
+            exit();
         }
     }
 
-    if ($loginCorrecto) {
-        $_SESSION['login'] = $usuario; // Establece la sesión
-        header('Location: index.php');
-        exit();
-    } else {
-        $errorCredenciales = "Credenciales incorrectas";
-    }
+    $errorCredenciales = "Credenciales incorrectas";
 }
+
 
 ?>

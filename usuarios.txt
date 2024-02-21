@@ -2,5 +2,3 @@ ismael|1234
 diego|1234
 christian|1234
 esther|1234
-|
-1121212|1212
