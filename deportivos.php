@@ -40,51 +40,64 @@
             <div class="productos">
                 <?php foreach ($productos as $producto) { ?>
                     <form action="" method="post">
-                        <figure>
+                        <figure class="producto">
                             <img src="<?php echo $producto['imagen']; ?>" class="imagenCoche">
-                            <p>Alquiler
-                                <?php echo $producto['nombre']; ?>
-                                <?php echo $producto['precio']; ?>€/dia
-                            </p>
-                            <input type="hidden" name="id" value="<?php echo $producto['id']; ?>">
-                            <input type="hidden" name="nombre" value="<?php echo $producto['nombre']; ?>">
-                            <input type="hidden" name="precio" value="<?php echo $producto['precio']; ?>">
-                            <input type="hidden" name="imagen" value="<?php echo $producto['imagen']; ?>">
-                            <input type="hidden" name="logo" value="<?php echo $producto['logo']; ?>">
-                            <label for="dias">Dias:</label>
-                            <input type="number" id="caja" name="dias" value="1" min="1">
-                            <br>
-                            <input type="submit" name="agregarAlCarrito" value="Añadir">
+                            <figcaption class="producto-info">
+                                <h1 class="nombre">
+                                    <?php echo $producto['nombre']; ?>
+                                </h1>
+                                <p class="precio">
+                                    <?php echo $producto['precio']; ?>€/dia
+                                </p>
+                            </figcaption>
+                            <div class="productoOpciones">
+                                <input type="hidden" name="id" value="<?php echo $producto['id']; ?>">
+                                <input type="hidden" name="nombre" value="<?php echo $producto['nombre']; ?>">
+                                <input type="hidden" name="precio" value="<?php echo $producto['precio']; ?>">
+                                <input type="hidden" name="imagen" value="<?php echo $producto['imagen']; ?>">
+                                <input type="hidden" name="logo" value="<?php echo $producto['logo']; ?>">
+                                <label for="dias">Dias:</label>
+                                <input type="text" id="dias" name="dias" value="1" class="dias" pattern="[0-9]*">
+                                <button type="submit" name="agregarAlCarrito" class="addCarro"><i
+                                        class="fa-solid fa-cart-plus"></i></button>
+                            </div>
                         </figure>
                     </form>
                 <?php } ?>
             </div>
             <aside id="carro">
-
                 <?php if (isset($_SESSION['login'])) { ?>
                     <h2>Reservas pendientes:</h2>
                     <?php if (isset($_SESSION['carrito']) && !empty($_SESSION['carrito'])) { ?>
                         <form method="post" action="">
-                            <button type="submit" name="vaciarCarrito">Vaciar Carrito</button>
+                            <button type="submit" name="vaciarCarrito" onclick="return confirm('¿Estas seguro que quieres vaciar el carrito?')" class="vaciarCarro">Vaciar Carrito</button>
                         </form>
-                        <form method="post" action="">
-                            <ul class="ulListaCompra">
-                                <?php foreach ($_SESSION['carrito'] as $key => $producto) { ?>
-                                    <li class='listaCompra'>
-                                        <img src='<?php echo $producto['logo']; ?>' alt='<?php echo $producto['nombre']; ?>'
-                                            class='logoCoches'>
-                                        <?php echo $producto['nombre']; ?> - Dias:
-                                        <?php echo $producto['dias']; ?>
-                                        <br>Total:
-                                        <?php echo $producto['precio'] * $producto['dias']; ?> €
-                                        <button type='submit' name='eliminarProducto' class='eliminarProd'
-                                            value='<?php echo $key; ?>'><i class='fas fa-trash-alt'></i></button>
-                                    </li>
-                                <?php } ?>
-                            </ul>
-                        </form>
+                        <?php foreach ($_SESSION['carrito'] as $key => $producto) { ?>
+                            <div class="reserva">
+                                <img src="<?php echo $producto['logo']; ?>" alt="<?php echo $producto['nombre']; ?>"
+                                    class="logoCoches">
+                                <div class="info">
+                                    <span class="nombre">
+                                        <?php echo $producto['nombre']; ?>
+                                    </span>
+                                    <div class="precio">
+                                        <span>Días:
+                                            <?php echo $producto['dias']; ?>
+                                        </span>
+                                        <span>Total:
+                                            <?php echo $producto['precio'] * $producto['dias']; ?> €
+                                        </span>
+                                    </div>
+                                </div>
+                                <form method="post" action="">
+                                    <button type="submit" name="eliminarProducto" onclick="return confirm('¿Estas seguro que quieres eliminar el producto?')" class="eliminarProd" value="<?php echo $key; ?>">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        <?php } ?>
                         <form method="post" action="resumenReserva.php">
-                            <button type="submit" name="confirmarReserva">Confirmar Reserva</button>
+                            <button type="submit" name="confirmarReserva" id="confirmarReserva">Ver resumen</button>
                         </form>
                     <?php } else { ?>
                         <p>No tienes ninguna reserva pendiente</p>
@@ -93,6 +106,7 @@
                     <p>Debes iniciar sesión para ver tus reservas</p>
                 <?php } ?>
             </aside>
+
         </section>
     </main>
     <footer id="pie2">

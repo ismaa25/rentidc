@@ -31,22 +31,22 @@ tr:nth-child(even) {
 }
 
 table img {
-    max-width: 150px; /* Mantenemos el tamaño original de la imagen */
+    max-width: 150px; 
     height: auto;
 }
 
 .totalReserva {
-    font-size: 28px; /* Aumentamos el tamaño de la fuente */
+    font-size: 28px; 
     font-weight: bold;
     color: #ff0000;
-    text-align: right; /* Alineamos el texto a la derecha */
+    text-align: right; 
 }
 
 button[name="realizarReserva"] {
     display: block;
     margin: 30px auto 0;
-    padding: 15px 30px; /* Aumentamos el padding para hacerlo más grande */
-    font-size: 18px; /* Aumentamos el tamaño de la fuente */
+    padding: 15px 30px; 
+    font-size: 18px; 
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -97,7 +97,7 @@ h2 {
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form input[type="tel"] {
-    width: calc(100% - 24px); /* Restamos 24px para compensar el padding */
+    width: calc(100% - 24px); 
     padding: 12px;
     border: none;
     border-radius: 5px;

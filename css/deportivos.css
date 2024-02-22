@@ -3,11 +3,16 @@ ALUMNO: CHRISTIAN ADRIAN PEREIRA GALEANO
 ALUMNO: DIEGO LANAGRAN ESCAÑO
 ALUMNO: ISMAEL LOPEZ VILLAR 
 */
-
 body {
     color: white;
     margin: 0;
     padding: 0;
+}
+
+.producto {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .grid {
@@ -15,8 +20,7 @@ body {
     grid-template-columns: 1fr 400px;
     gap: 20px;
     width: 92vw;
-    margin: auto;
-    margin-top: 15px;
+    margin: 15px auto;
 }
 
 .carro {
@@ -30,13 +34,48 @@ body {
 .productos {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 10px;
 }
 
 .grid .imagenCoche {
     width: 85%;
     height: 300px;
     border-radius: 15px;
+    object-fit: cover;
+}
+
+.producto-info {
+    text-align: center;
+}
+
+.nombre {
+    margin-bottom: 5px;
+    color: gold;
+}
+
+.precio {
+    color: #ccc;
+}
+
+.productoOpciones {
+    margin-top: 10px;
+}
+
+.productoOpciones label {
+    margin-right: 5px;
+}
+
+.dias {
+    width: 30px;
+    padding: 3px;
+    border: 1px solid gold;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
 }
 
 .grid figure {
@@ -44,63 +83,143 @@ body {
     margin: 5px;
 }
 
-h1 {
-    text-align: center;
-}
-
 .eliminarProd {
     background: none;
     border: none;
-    padding: 20px;
-    font-size: inherit;
-    color: inherit;
+    color: white;
     cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
-.listaCompra {
-    list-style: none;
-    display: flex;
-    align-items: center;
+.eliminarProd i {
+    color: red;
+    font-size: 1.3em;
+}
+
+.eliminarProd:hover {
+    transform: scale(1.2);
+}
+
+.vaciarCarro,
+#confirmarReserva {
+    background-color: #333;
+    border: 1px solid gold;
+    border-radius: 5px;
+    color: white;
+    padding: 4px 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    outline: none;
+}
+
+.vaciarCarro:hover,
+#confirmarReserva:hover {
+    background-color: #FFD700;
+    color: #212121;
+    transform: scale(1.1);
+}
+
+
+.addCarro {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    vertical-align: middle;
+    outline: none;
+    font-size: 1.4em;
+}
+
+.addCarro i {
+    color: gold;
+}
+
+.addCarro:hover {
+    color: #FFD700;
+    transform: scale(1.1);
+}
+
+#carro {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 10px;
+    width: 100%;
+}
+
+#carro h2 {
+    text-align: center;
     margin-bottom: 10px;
 }
 
-.logoCoches {
-    width: 25px;
+.reserva {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.reserva img {
+    width: 30px;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.reserva .info {
+    flex-grow: 1;
     margin-right: 10px;
 }
 
-#carrito {
-    background-color: rgb(24, 21, 21);
-    color: white;
-    width: 70px;
-    height: 20px;
-    border-radius: 5px;
+.reserva .nombre {
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-#carrito:hover {
-    background-color: rgb(27, 22, 22);
-    color: white;
-    width: 90px;
-    height: 25px;
-    border-radius: 5px;
+.reserva .precio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#fcarrito {
-    background-color: rgb(24, 21, 21);
-    color: white;
-    width: 120px;
-    height: 20px;
-    border-radius: 5px;
+.reserva .precio span {
+    margin-right: 10px;
 }
 
-#fcarrito:hover {
-    background-color: rgb(66, 57, 57);
+.reserva button {
+    background: none;
+    border: none;
     color: white;
-    width: 125px;
-    height: 25px;
-    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
-#caja {
-    width: 35px;
+.reserva button:hover {
+    transform: scale(1.1);
+}
+
+#confirmarReserva {
+    background-color: #333;
+    border: 1px solid gold;
+    border-radius: 3px;
+    color: white;
+    padding: 6px 32px;
+    cursor: pointer;
+    transition: all 0.2s;
+    outline: none;
+    width: auto;
+    margin: 20px auto;
+    display: block;
+}
+
+#confirmarReserva:hover {
+    background-color: #FFD700;
+    color: #212121;
+    transform: scale(1.1);
+}
+
+.logoCoches {
+    width: 30px;
+    margin-right: 10px;
 }
