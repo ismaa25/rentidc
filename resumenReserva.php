@@ -28,6 +28,7 @@ session_start();
                 <li><a href="index.php"><i class="fa-solid fa-house"></i><b>Inicio</b></a></li>
                 <li><a href="deportivos.php"><i class="fa-solid fa-car"></i><b>Coches Deportivos</b></a></li>
                 <li><a href="nosotros.php"><i class="fa-regular fa-id-badge"></i><b>Sobre nosotros</b></a></li>
+                <li><a href="resumenReserva.php"><i class="fa-solid fa-car-side"></i><b>Reservas pendientes</b></a></li>
                 <li><a href="cerrarSesion.php"><i class="fa-solid fa-right-from-bracket"></i><b>Cerrar sesión |
                             <?php echo $_SESSION['login']; ?>
                         </b></a></li>
@@ -45,7 +46,7 @@ session_start();
                     <thead>
                         <tr>
                             <th>Imagen</th>
-                            <th>Nombre</th>
+                            <th>Modelo</th>
                             <th>Precio por día</th>
                             <th>Días</th>
                             <th>Total parcial</th>
@@ -70,14 +71,33 @@ session_start();
                                 <?php $totalReserva += $producto['precio'] * $producto['dias']; ?>
                             </tr>
                         <?php } ?>
+                        <tr>
+                            <td colspan="4" style="text-align: right;">Total de la reserva:</td>
+                            <td><span class="totalReserva"><?php echo $totalReserva; ?> €</span></td>
+                        </tr>
                     </tbody>
                 </table>
-                <p>Total de la reserva:
-                    <?php echo $totalReserva; ?> €
-                </p>
-                <form method="post" action="realizar_reserva.php">
-                    <button type="submit" name="realizarReserva">Realizar Reserva</button>
+                <form method="post" action="#">
+                    <div class="contact-form">
+                        <h2>Datos de contacto</h2>
+                        <div class="formularioContacto">
+                            <div class="form-group">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo electrónico:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono:</label>
+                                <input type="tel" id="telefono" name="telefono" required>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" name="realizarReserva">Solicitar reserva</button>
                 </form>
+
             <?php } ?>
         </section>
     </main>

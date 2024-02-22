@@ -1,53 +1,106 @@
-/* Estilo para la sección */
+/* Estilos generales */
 section {
-    width: 60%; /* Ancho del 60% de la pantalla */
-    margin: 0 auto; /* Margen automático a la izquierda y derecha para centrar */
+    width: 70%;
+    margin: 30px auto;
+    background-color: #222;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    color: #eee;
 }
 
-/* Estilo para la tabla */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
 
-/* Estilo para las celdas de la tabla */
 th, td {
-    padding: 10px;
+    padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
-    color: #fff; /* Texto blanco */
+    color: #eee;
 }
 
-/* Estilo para el encabezado de la tabla */
 th {
-    background-color: #444; /* Fondo gris oscuro */
+    background-color: #444;
 }
 
-/* Estilo para las imágenes en la tabla */
+tr:nth-child(even) {
+    background-color: #444;
+}
+
 table img {
-    max-width: 100px;
+    max-width: 150px; /* Mantenemos el tamaño original de la imagen */
     height: auto;
 }
 
-/* Estilo para filas pares de la tabla */
-tr:nth-child(even) {
-    background-color: #333; /* Fondo gris */
+.totalReserva {
+    font-size: 28px; /* Aumentamos el tamaño de la fuente */
+    font-weight: bold;
+    color: #ff0000;
+    text-align: right; /* Alineamos el texto a la derecha */
 }
 
-/* Estilo para el botón de realizar reserva */
 button[name="realizarReserva"] {
     display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: #007bff; /* Azul */
-    color: #fff; /* Texto blanco */
+    margin: 30px auto 0;
+    padding: 15px 30px; /* Aumentamos el padding para hacerlo más grande */
+    font-size: 18px; /* Aumentamos el tamaño de la fuente */
+    background-color: #007bff;
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-family: Poppins-Regular;
 }
 
-/* Estilo para el botón de realizar reserva al pasar el cursor */
 button[name="realizarReserva"]:hover {
-    background-color: #0056b3; /* Azul más oscuro */
+    background-color: #0056b3;
+}
+
+h2 {
+    color: #eee;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    background-color: #333;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    color: #eee;
+    margin: 30px auto;
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.formularioContacto {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"] {
+    width: calc(100% - 24px); /* Restamos 24px para compensar el padding */
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #eee;
 }
