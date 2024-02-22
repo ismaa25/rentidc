@@ -1,0 +1,53 @@
+/* Estilo para la sección */
+section {
+    width: 60%; /* Ancho del 60% de la pantalla */
+    margin: 0 auto; /* Margen automático a la izquierda y derecha para centrar */
+}
+
+/* Estilo para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+/* Estilo para las celdas de la tabla */
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: #fff; /* Texto blanco */
+}
+
+/* Estilo para el encabezado de la tabla */
+th {
+    background-color: #444; /* Fondo gris oscuro */
+}
+
+/* Estilo para las imágenes en la tabla */
+table img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Estilo para filas pares de la tabla */
+tr:nth-child(even) {
+    background-color: #333; /* Fondo gris */
+}
+
+/* Estilo para el botón de realizar reserva */
+button[name="realizarReserva"] {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff; /* Azul */
+    color: #fff; /* Texto blanco */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilo para el botón de realizar reserva al pasar el cursor */
+button[name="realizarReserva"]:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}

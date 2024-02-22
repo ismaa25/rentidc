@@ -3,9 +3,6 @@ ALUMNO: CHRISTIAN ADRIAN PEREIRA GALEANO
 ALUMNO: DIEGO LANAGRAN ESCAÑO
 ALUMNO: ISMAEL LOPEZ VILLAR 
 */
-/* * {
-    border: solid 1px white;
-} */
 
 body {
     color: white;
@@ -16,12 +13,10 @@ body {
 .grid {
     display: grid;
     grid-template-columns: 1fr 400px;
-    /* Dos columnas: una para los productos y otra para el carrito */
     gap: 20px;
-    width: 90%;
-    /* Ancho del 90% del contenedor */
+    width: 92vw;
     margin: auto;
-    /* Centrar el grid */
+    margin-top: 15px;
 }
 
 .carro {
@@ -29,15 +24,12 @@ body {
     border-radius: 15px;
     padding: 10px;
     max-width: 100px;
-    /* Máximo ancho para el carro */
     width: 100%;
-    /* Ancho del 100% del contenedor */
 }
 
 .productos {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* Dos columnas */
     gap: 20px;
 }
 
@@ -59,7 +51,7 @@ h1 {
 .eliminarProd {
     background: none;
     border: none;
-    padding: 10px;
+    padding: 20px;
     font-size: inherit;
     color: inherit;
     cursor: pointer;

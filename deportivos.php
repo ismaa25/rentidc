@@ -59,32 +59,37 @@
                 <?php } ?>
             </div>
             <aside id="carro">
-                <h2>Reservas Pendientes</h2>
+
                 <?php if (isset($_SESSION['login'])) { ?>
+                    <h2>Reservas pendientes:</h2>
                     <?php if (isset($_SESSION['carrito']) && !empty($_SESSION['carrito'])) { ?>
                         <form method="post" action="">
-                            <ul>
+                            <button type="submit" name="vaciarCarrito">Vaciar Carrito</button>
+                        </form>
+                        <form method="post" action="">
+                            <ul class="ulListaCompra">
                                 <?php foreach ($_SESSION['carrito'] as $key => $producto) { ?>
                                     <li class='listaCompra'>
                                         <img src='<?php echo $producto['logo']; ?>' alt='<?php echo $producto['nombre']; ?>'
                                             class='logoCoches'>
-                                        <?php echo $producto['nombre']; ?> -
-                                        <?php echo $producto['precio'] * $producto['dias']; ?>€ - Dias:
+                                        <?php echo $producto['nombre']; ?> - Dias:
                                         <?php echo $producto['dias']; ?>
+                                        <br>Total:
+                                        <?php echo $producto['precio'] * $producto['dias']; ?> €
                                         <button type='submit' name='eliminarProducto' class='eliminarProd'
                                             value='<?php echo $key; ?>'><i class='fas fa-trash-alt'></i></button>
                                     </li>
                                 <?php } ?>
                             </ul>
                         </form>
-                        <form method="post" action="">
-                            <button type="submit" name="vaciarCarrito">Vaciar Carrito</button>
+                        <form method="post" action="resumenReserva.php">
+                            <button type="submit" name="confirmarReserva">Confirmar Reserva</button>
                         </form>
                     <?php } else { ?>
-                        <p>El carrito está vacío</p>
+                        <p>No tienes ninguna reserva pendiente</p>
                     <?php } ?>
                 <?php } else { ?>
-                    <p>Debes iniciar sesión para ver tu carrito</p>
+                    <p>Debes iniciar sesión para ver tus reservas</p>
                 <?php } ?>
             </aside>
         </section>

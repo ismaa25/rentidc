@@ -5,7 +5,6 @@ ALUMNO: ISMAEL LOPEZ VILLAR
 */
 
  *{
-
     margin: 0;
 } 
 @font-face {
@@ -75,7 +74,8 @@ header{
 
 #pie2{
     float: right;
-    margin-top: 1300px; 
+    margin-right: 10px;
+    margin-top: 10px;
 }
 #pie2 a{
     text-decoration: none;
