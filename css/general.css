@@ -4,9 +4,10 @@ ALUMNO: DIEGO LANAGRAN ESCAÑO
 ALUMNO: ISMAEL LOPEZ VILLAR 
 */
 
- *{
+* {
     margin: 0;
-} 
+}
+
 @font-face {
     font-family: Poppins-Regular;
     src: url(../font/Poppins-Regular.ttf);
@@ -17,6 +18,9 @@ body {
     background-color: black;
     font-family: Poppins-Regular;
     color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 i {
@@ -24,66 +28,46 @@ i {
     color: bisque;
 }
 
-.caja1{
+.caja1 {
     width: 16%;
 }
-.logo{
+
+.logo {
     width: 110px;
     float: left;
     margin-left: 20%;
 }
-ol li{
+
+ol li {
     width: 18%;
     float: left;
     margin-top: 40px;
     color: white;
     list-style: none;
     text-align: center;
-    
+
 }
-ol li a{
+
+ol li a {
     color: bisque;
     text-decoration: none;
 }
 
-a:hover, a:hover i {
+a:hover,
+a:hover i {
     color: rgb(201, 172, 6);
 }
 
-header{
+header {
     height: 110px;
     border-bottom: 1px solid white;
 }
 
-/*Pie de pagina*/
-
-#pie a{
-    text-decoration: none;
-    color: white;
-}
-
-#pie p{
-    width: 100%;
-    text-align: end;
-    margin: 0px;
-}
-#pie{
-    float: right;
-    margin-top: 100px; 
-}
-
-#pie2{
-    float: right;
-    margin-right: 10px;
-    margin-top: 10px;
-}
-#pie2 a{
-    text-decoration: none;
-    color: white;
-}
-
-#pie2 p{
-    width: 100%;
-    text-align: end;
-    margin: 0px;
+footer {
+    margin-top: auto;
+    /* Este es el cambio */
+    background-color: #1f1f1f;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
 }

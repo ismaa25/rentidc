@@ -1,3 +1,8 @@
+/*
+ALUMNO: CHRISTIAN ADRIAN PEREIRA GALEANO
+ALUMNO: DIEGO LANAGRAN ESCAÑO
+ALUMNO: ISMAEL LOPEZ VILLAR 
+*/
 /* Estilos generales */
 section {
     width: 70%;
@@ -15,7 +20,8 @@ table {
     margin-bottom: 20px;
 }
 
-th, td {
+th,
+td {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
@@ -31,22 +37,22 @@ tr:nth-child(even) {
 }
 
 table img {
-    max-width: 150px; 
+    max-width: 150px;
     height: auto;
 }
 
 .totalReserva {
-    font-size: 28px; 
+    font-size: 28px;
     font-weight: bold;
     color: #ff0000;
-    text-align: right; 
+    text-align: right;
 }
 
 button[name="realizarReserva"] {
     display: block;
     margin: 30px auto 0;
-    padding: 15px 30px; 
-    font-size: 18px; 
+    padding: 15px 30px;
+    font-size: 18px;
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -97,7 +103,7 @@ h2 {
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form input[type="tel"] {
-    width: calc(100% - 24px); 
+    width: calc(100% - 24px);
     padding: 12px;
     border: none;
     border-radius: 5px;

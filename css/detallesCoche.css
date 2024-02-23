@@ -1,0 +1,87 @@
+/*
+ALUMNO: CHRISTIAN ADRIAN PEREIRA GALEANO
+ALUMNO: DIEGO LANAGRAN ESCAÑO
+ALUMNO: ISMAEL LOPEZ VILLAR 
+*/
+.detalle-coche {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.detalle-coche-container {
+    display: flex;
+    max-width: 80vw;
+    width: 100%;
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.imagen-coche {
+    flex: 1;
+    object-fit: cover;
+    width: 100%;
+    max-width: 500px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.detalle-coche-info {
+    flex: 1;
+    padding: 2rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detalle-coche h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: gold;
+}
+
+.detalle-coche p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.precio {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.btn-reservar {
+    background-color: gold;
+    color: #333333;
+    padding: 0.4rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn-reservar:hover {
+    background-color: #c69c3d;
+}
+
+form label {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+form input[type="number"] {
+    width: 40px;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+
+}

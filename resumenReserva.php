@@ -8,9 +8,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="CHRISTIAN PEREIRA GALEANO">
-    <meta name="author" content="DIEGO LANAGRAN ESCAÑO">
-    <meta name="author" content="ISMAEL LOPEZ VILLAR">
+    <meta name="author" content="Christian, Ismael y Diego">
     <link rel="icon" href="img/favicon-16x16.png">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/resumenReserva.css">
@@ -73,7 +71,9 @@ session_start();
                         <?php } ?>
                         <tr>
                             <td colspan="4" style="text-align: right;">Total de la reserva:</td>
-                            <td><span class="totalReserva"><?php echo $totalReserva; ?> €</span></td>
+                            <td><span class="totalReserva">
+                                    <?php echo $totalReserva; ?> €
+                                </span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -98,6 +98,8 @@ session_start();
                     <button type="submit" name="realizarReserva">Solicitar reserva</button>
                 </form>
 
+            <?php } else { ?>
+                <p>No tienes reservas pendientes, mira nuestros coches disponibles <a href="deportivos.php">aqui</a>.</p>
             <?php } ?>
         </section>
     </main>

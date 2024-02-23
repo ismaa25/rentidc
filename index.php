@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="CHRISTIAN PEREIRA GALEANO">
-    <meta name="author" content="DIEGO LANAGRAN ESCAÑO">
-    <meta name="author" content="ISMAEL LOPEZ VILLAR">
+    <meta name="author" content="Christian, Ismael y Diego">
     <link rel="icon" href="img/favicon-16x16.png">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/inicio.css">

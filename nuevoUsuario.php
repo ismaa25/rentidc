@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <meta name="author" content="CHRISTIAN PEREIRA GALEANO">
-    <meta name="author" content="DIEGO LANAGRAN ESCAÑO">
-    <meta name="author" content="ISMAEL LOPEZ VILLAR">
+    <meta name="author" content="Christian, Ismael y Diego">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Nuevo Usuario</title>
 </head>

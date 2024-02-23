@@ -3,11 +3,6 @@ ALUMNO: CHRISTIAN ADRIAN PEREIRA GALEANO
 ALUMNO: DIEGO LANAGRAN ESCAÑO
 ALUMNO: ISMAEL LOPEZ VILLAR 
 */
-body {
-    color: white;
-    margin: 0;
-    padding: 0;
-}
 
 .producto {
     border-radius: 10px;
@@ -48,15 +43,6 @@ body {
     text-align: center;
 }
 
-.nombre {
-    margin-bottom: 5px;
-    color: gold;
-}
-
-.precio {
-    color: #ccc;
-}
-
 .productoOpciones {
     margin-top: 10px;
 }
@@ -81,6 +67,40 @@ body {
 .grid figure {
     text-align: center;
     margin: 5px;
+}
+
+.producto-link {
+    text-decoration: none; 
+    color: inherit;
+    cursor: pointer;
+}
+
+.imagenCoche {
+    transition: transform 0.4s ease;
+    
+}
+
+.producto-link:hover .imagenCoche {
+    transform: scale(1.02); /* Escalar al 110% */
+    transition: transform 0.4s ease;
+    
+}
+
+.nombre {
+    margin-bottom: 5px;
+    color: gold;
+    transition: transform 0.4s ease;
+}
+
+.precio {
+    color: #ccc;
+    transition: transform 0.4s ease;
+}
+
+.producto-link:hover .nombre,
+.producto-link:hover .precio {
+    transform: scale(1.04); /* Escalar al 105% */
+    transition: transform 0.4s ease;
 }
 
 .eliminarProd {

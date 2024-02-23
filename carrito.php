@@ -5,13 +5,6 @@ ALUMNO: DIEGO LANAGRAN ESCAÑO
 ALUMNO: ISMAEL LOPEZ VILLAR 
 */
 session_start();
-
-// Verificar si existe una cookie de carrito para este usuario
-if (isset($_COOKIE['usuario_id']) && isset($_COOKIE['carritoUsuario' . $_COOKIE['usuario_id']])) {
-    // Recuperar el carrito de la cookie y almacenarlo en la sesión
-    $_SESSION['carrito'] = unserialize($_COOKIE['carritoUsuario' . $_COOKIE['usuario_id']]);
-}
-
 // Iniciamos la sesion de carrito vacia
 if (!isset($_SESSION['carrito'])) {
     $_SESSION['carrito'] = array();
@@ -40,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Agregar producto
-    if (isset($_POST['agregarAlCarrito'])) {
+    if (isset($_POST['agregarAlCarrito']) || isset($_POST['agregarAlCarrito2'])) {
         $id = $_POST['id'];
         $dias = $_POST['dias'];
 
@@ -69,9 +62,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Guardar el carrito en la cookie
         $carrito_serializado = serialize($_SESSION['carrito']);
         setcookie('carritoUsuario' . $_COOKIE['usuario_id'], $carrito_serializado, time() + (30 * 24 * 60 * 60), '/');
+
+        if (isset($_POST['agregarAlCarrito2'])) {
+            header('Location: resumenReserva.php');
+            exit;
+        }
     }
-
-
 
 }
 ?>

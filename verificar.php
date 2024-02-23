@@ -16,12 +16,13 @@ if (isset($_POST['usuario']) && isset($_POST['pass'])) {
         list($nombre, $contrasena) = explode('|', $linea);
 
         if ($usuario == $nombre && $pass == $contrasena) {
-            // Establecer una cookie para el ID del usuario
-            setcookie('usuario_id', $usuario, time() + (30 * 24 * 60 * 60), '/'); // Caduca en 30 días
+            setcookie('usuario_id', $usuario, time() + (30 * 24 * 60 * 60), '/');
 
-            // Establecer la sesión para el usuario
+            if (isset($_COOKIE['carritoUsuario' . $usuario])) {
+                $_SESSION['carrito'] = unserialize($_COOKIE['carritoUsuario' . $usuario]);
+            }
+
             $_SESSION['login'] = $usuario;
-
             header('Location: index.php');
             exit();
         }
@@ -29,6 +30,5 @@ if (isset($_POST['usuario']) && isset($_POST['pass'])) {
 
     $errorCredenciales = "Credenciales incorrectas";
 }
-
 
 ?>
