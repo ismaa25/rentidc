@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -17,6 +13,10 @@ session_start();
 </head>
 
 <body>
+    <?php
+    include("comprobarLogin.php");
+    include("confirmarReserva.php");
+    ?>
     <header>
         <figure class="caja1">
             <a href="index.php"><img src="img/logo_cabesa_negro.png" class="logo"></a>
@@ -36,6 +36,7 @@ session_start();
     <main>
         <section>
             <h2>Resumen de la reserva</h2>
+
             <?php
             $totalReserva = 0;
             if (isset($_SESSION['carrito']) && !empty($_SESSION['carrito'])) {
@@ -70,31 +71,35 @@ session_start();
                             </tr>
                         <?php } ?>
                         <tr>
-                            <td colspan="4" style="text-align: right;">Total de la reserva:</td>
+                            <td colspan="4" class="textReserva">Total de la reserva:</td>
                             <td><span class="totalReserva">
                                     <?php echo $totalReserva; ?> €
                                 </span></td>
                         </tr>
                     </tbody>
                 </table>
-                <form method="post" action="#">
-                    <div class="contact-form">
+                <form method="post">
+                    <button type="submit" onclick="return confirm('¿Estas seguro que quieres eliminar todas las reservas?')" name="eliminarReserva">Eliminar reservas</button>
+                </form>
+                <form method="post" action="">
+                    <div class="fContacto">
                         <h2>Datos de contacto</h2>
-                        <div class="formularioContacto">
-                            <div class="form-group">
+                        <div class="fInput">
+                            <div class="gForm">
                                 <label for="nombre">Nombre:</label>
                                 <input type="text" id="nombre" name="nombre" required>
                             </div>
-                            <div class="form-group">
+                            <div class="gForm">
                                 <label for="email">Correo electrónico:</label>
                                 <input type="email" id="email" name="email" required>
                             </div>
-                            <div class="form-group">
+                            <div class="gForm">
                                 <label for="telefono">Teléfono:</label>
                                 <input type="tel" id="telefono" name="telefono" required>
                             </div>
                         </div>
                     </div>
+
                     <button type="submit" name="realizarReserva">Solicitar reserva</button>
                 </form>
 

@@ -15,6 +15,7 @@
 <body>
     <header>
         <?php
+        include('comprobarLogin.php');
         include('carrito.php');
         include('coches.php');
         ?>
@@ -93,7 +94,7 @@
                                 </div>
                                 <form method="post" action="">
                                     <button type="submit" name="eliminarProducto"
-                                        onclick="return confirm('¿Estas seguro que quieres eliminar el producto?')"
+                                        onclick="return confirm('¿Estas seguro que quieres eliminar el coche?')"
                                         class="eliminarProd" value="<?php echo $key; ?>">
                                         <i class="fa-regular fa-trash-can"></i>
                                     </button>

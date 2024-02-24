@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -15,7 +14,8 @@
 
 <body>
     <header>
-        <?php include('coches.php'); ?>
+        <?php include('coches.php');
+        include('comprobarLogin.php'); ?>
         <figure class="caja1">
             <a href="index.php"><img src="img/logo_cabesa_negro.png" class="logo" alt="RentIDC"></a>
         </figure>
@@ -35,11 +35,9 @@
         <section class="grid">
             <div class="detalle-coche">
                 <?php
-                // Verificar si se proporcionó un ID de producto válido
                 if (isset($_GET['id']) && !empty($_GET['id'])) {
                     $cocheID = $_GET['id'];
 
-                    // Buscar el producto correspondiente al ID en el array de productos
                     $detallesCoche = null;
                     foreach ($coches as $coche) {
                         if ($coche['id'] == $cocheID) {
@@ -48,7 +46,6 @@
                         }
                     }
 
-                    // Verificar si se encontró el producto
                     if ($detallesCoche) {
                         ?>
                         <div class="detalle-coche-container">
@@ -66,7 +63,6 @@
                                     <?php echo $detallesCoche['precio']; ?> €/dia
                                 </p>
 
-                                <!-- Campo de entrada para los días de alquiler -->
                                 <form action="carrito.php" method="post">
                                     <input type="hidden" name="id" value="<?php echo $detallesCoche['id']; ?>">
                                     <input type="hidden" name="nombre" value="<?php echo $detallesCoche['nombre']; ?>">
@@ -77,18 +73,15 @@
                                     <label for="dias">Días de Alquiler:</label>
                                     <input type="number" id="dias" name="dias" min="1" value="1">
 
-                                    <!-- Botón para enviar el formulario -->
                                     <button type="submit" name="agregarAlCarrito2" class="btn-reservar">Reservar</button>
                                 </form>
                             </div>
                         </div>
                         <?php
                     } else {
-                        // Si no se encontró el producto correspondiente al ID, mostrar un mensaje de error
                         echo "<p>No se encontró el producto.</p>";
                     }
                 } else {
-                    // Si no se proporciona un ID de producto válido, mostrar un mensaje de error
                     echo "<p>ID de producto no válido.</p>";
                 }
                 ?>

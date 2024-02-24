@@ -4,13 +4,12 @@ ALUMNO: CHRISTIAN ADRIAN PEREIRA GALEANO
 ALUMNO: DIEGO LANAGRAN ESCAÑO
 ALUMNO: ISMAEL LOPEZ VILLAR 
 */
-session_start();
 // Iniciamos la sesion de carrito vacia
 if (!isset($_SESSION['carrito'])) {
     $_SESSION['carrito'] = array();
 }
 
-// Vaciar el carrito en la sesión y eliminar la cookie del carrito
+// Vaciar el carrito en la sesion y eliminar la cookie del carrito
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['vaciarCarrito'])) {
         $_SESSION['carrito'] = [];

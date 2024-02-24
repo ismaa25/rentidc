@@ -9,22 +9,27 @@
     <title>Nuevo Usuario</title>
 </head>
 <body>
-    <?php
-        include("validarNuevo.php");
-    ?> 
+   
     <header>
         <h1>RentIDC</h1>
     </header>
         <main>
             <section>
                 <article>
-                <form action="#" method="post">
+                <form action="validarNuevo.php" method="post">
                     <h3>Agregar usuario</h3>
-                    <input type="text" name="ausuario" id="ausuario" placeholder="Usuario">
+                    <input type="text" name="ausuario" id="ausuario" placeholder="Usuario" required>
                     <br>
-                    <input type="password" name="apass" id="apass" placeholder="Contraseña">
+                    <input type="password" name="apass" id="apass" placeholder="Contraseña" required>
                     <br>
-                    <input type="submit" value="Agregar">
+                    <br>
+                    <button type="submit" class="btnLogin">Confirmar registro <i class="fa-solid fa-user-plus"></i></button>
+                    <div class="crearCuenta">
+                        <hr class="my-4">
+                        <p class="pCuenta">¿Tienes una cuenta?</p>
+                        <a href="login.php" class="btnRegistro" role="button">Inicia sesion<i
+                                class="fa-solid fa-right-to-bracket"></i></a>
+                    </div>
                 </form>
                 </article>
             </section>

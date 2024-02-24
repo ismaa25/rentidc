@@ -65,13 +65,31 @@ button[name="realizarReserva"]:hover {
     background-color: #0056b3;
 }
 
+button[name="eliminarReserva"] {
+    background-color: #333;
+    border: 1px solid red;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    padding: 4px 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    outline: none;
+    font-family: Poppins-Regular;
+}
+
+button[name="eliminarReserva"]:hover {
+    background-color: red;
+    transform: scale(1.1);
+}
+
 h2 {
     color: #eee;
     text-align: center;
     margin-bottom: 30px;
 }
 
-.contact-form {
+.fContacto {
     background-color: #333;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -81,32 +99,37 @@ h2 {
     margin: 30px auto;
 }
 
-.contact-form h2 {
+.fContacto h2 {
     text-align: center;
     margin-bottom: 30px;
 }
 
-.contact-form .form-group {
+.fContacto .gForm {
     margin-bottom: 20px;
 }
 
-.contact-form label {
+.fContacto label {
     display: block;
     margin-bottom: 10px;
 }
 
-.formularioContacto {
+.fInput {
     width: 80%;
     margin: 0 auto;
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form input[type="tel"] {
+.fContacto input[type="text"],
+.fContacto input[type="email"],
+.fContacto input[type="tel"] {
     width: calc(100% - 24px);
-    padding: 12px;
+    padding: 10px;
     border: none;
     border-radius: 5px;
     background-color: #444;
     color: #eee;
+    font-family: Poppins-Regular;
+}
+
+.textReserva {
+    text-align: right;
 }
