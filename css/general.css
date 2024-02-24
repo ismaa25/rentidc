@@ -58,6 +58,10 @@ a:hover i {
     color: rgb(201, 172, 6);
 }
 
+.active {
+    color: rgb(201, 172, 6);
+}
+
 header {
     height: 110px;
     border-bottom: 1px solid white;

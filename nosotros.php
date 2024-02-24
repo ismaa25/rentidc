@@ -22,7 +22,7 @@
             <ol>
                 <li><a href="index.php"><i class="fa-solid fa-house"></i><b>Inicio</b></a></li>
                 <li><a href="deportivos.php"><i class="fa-solid fa-car"></i><b>Coches Deportivos</b></a></li>
-                <li><a href="nosotros.php"><i class="fa-regular fa-id-badge"></i><b>Sobre nosotros</b></a></li>
+                <li><a href="nosotros.php" class="active"><i class="fa-regular fa-id-badge active"></i><b>Sobre nosotros</b></a></li>
                 <li><a href="resumenReserva.php"><i class="fa-solid fa-car-side"></i><b>Reservas pendientes</b></a></li>
                 <li><a href="cerrarSesion.php"><i class="fa-solid fa-right-from-bracket"></i><b>Cerrar sesión | <?php echo $_SESSION['login'];?></b></a></li>
             </ol>

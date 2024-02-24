@@ -133,3 +133,24 @@ h2 {
 .textReserva {
     text-align: right;
 }
+
+.celdaBorrar {
+    width: 150px;
+}
+
+.btnBorrar {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.btnBorrar i {
+    color: red;
+    font-size: 1.3em;
+}
+
+.btnBorrar:hover {
+    transform: scale(1.2);
+}

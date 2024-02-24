@@ -15,6 +15,7 @@
 <body>
     <?php
     include("comprobarLogin.php");
+    include("carrito.php");
     include("confirmarReserva.php");
     ?>
     <header>
@@ -26,7 +27,7 @@
                 <li><a href="index.php"><i class="fa-solid fa-house"></i><b>Inicio</b></a></li>
                 <li><a href="deportivos.php"><i class="fa-solid fa-car"></i><b>Coches Deportivos</b></a></li>
                 <li><a href="nosotros.php"><i class="fa-regular fa-id-badge"></i><b>Sobre nosotros</b></a></li>
-                <li><a href="resumenReserva.php"><i class="fa-solid fa-car-side"></i><b>Reservas pendientes</b></a></li>
+                <li><a href="resumenReserva.php" class="active"><i class="fa-solid fa-car-side active"></i><b>Reservas pendientes</b></a></li>
                 <li><a href="cerrarSesion.php"><i class="fa-solid fa-right-from-bracket"></i><b>Cerrar sesión |
                             <?php echo $_SESSION['login']; ?>
                         </b></a></li>
@@ -49,10 +50,11 @@
                             <th>Precio por día</th>
                             <th>Días</th>
                             <th>Total parcial</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($_SESSION['carrito'] as $producto) { ?>
+                        <?php foreach ($_SESSION['carrito'] as $key => $producto) { ?>
                             <tr>
                                 <td><img src="<?php echo $producto['imagen']; ?>" alt="<?php echo $producto['nombre']; ?>"></td>
                                 <td>
@@ -67,11 +69,20 @@
                                 <td>
                                     <?php echo $producto['precio'] * $producto['dias']; ?> €
                                 </td>
+                                <td class="celdaBorrar">
+                                <form method="post" action="">
+                                    <button type="submit" name="eliminarProducto"
+                                        onclick="return confirm('¿Estas seguro que quieres eliminar el coche?')"
+                                        class="btnBorrar" value="<?php echo $key; ?>">
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </button>
+                                </form>
+                                </td>
                                 <?php $totalReserva += $producto['precio'] * $producto['dias']; ?>
                             </tr>
                         <?php } ?>
                         <tr>
-                            <td colspan="4" class="textReserva">Total de la reserva:</td>
+                            <td colspan="5" class="textReserva">Total de la reserva:</td>
                             <td><span class="totalReserva">
                                     <?php echo $totalReserva; ?> €
                                 </span></td>

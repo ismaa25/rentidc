@@ -5,6 +5,7 @@ ALUMNO: DIEGO LANAGRAN ESCAÑO
 ALUMNO: ISMAEL LOPEZ VILLAR 
 */
 // Iniciamos la sesion de carrito vacia
+
 if (!isset($_SESSION['carrito'])) {
     $_SESSION['carrito'] = array();
 }
@@ -33,6 +34,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Agregar producto
     if (isset($_POST['agregarAlCarrito']) || isset($_POST['agregarAlCarrito2'])) {
+        if (isset($_POST['agregarAlCarrito2'])) {
+            session_start();
+        }
+        
         $id = $_POST['id'];
         $dias = $_POST['dias'];
 
@@ -63,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         setcookie('carritoUsuario' . $_COOKIE['usuario_id'], $carrito_serializado, time() + (30 * 24 * 60 * 60), '/');
 
         if (isset($_POST['agregarAlCarrito2'])) {
-            header('Location: resumenReserva.php');
+            header('Location: deportivos.php');
             exit;
         }
     }

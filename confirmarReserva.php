@@ -1,5 +1,9 @@
 <?php
-
+/*
+ALUMNO: CHRISTIAN ADRIAN PEREIRA GALEANO
+ALUMNO: DIEGO LANAGRAN ESCAÑO
+ALUMNO: ISMAEL LOPEZ VILLAR 
+*/
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['realizarReserva'])) {
     $_SESSION['carrito'] = [];
     setcookie('carritoUsuario' . $_COOKIE['usuario_id'], '', time() - 3600, '/');
